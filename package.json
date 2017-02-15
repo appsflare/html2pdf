@@ -1,0 +1,19 @@
+{
+    "name": "pdfconverter",
+    "version": "1.0.0",
+    "description": "pdf converter, html to pdf etc",
+    "main": "app.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [
+        "pdf",
+        "converter"
+    ],
+    "author": "HRA-Application",
+    "license": "ISC",
+    "dependencies": {
+        "hapi": "^13.0.0",
+        "html-pdf": "^2.0.1"
+    }
+}

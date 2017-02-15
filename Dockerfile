@@ -8,6 +8,6 @@ ADD static /apps/html2pdf/static
 
 WORKDIR /apps/html2pdf
 
-RUN npm install
+RUN npm install && npm install phantomjs-prebuilt --save
 
 CMD ["node","app.js"]

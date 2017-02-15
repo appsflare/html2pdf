@@ -1,4 +1,4 @@
-FROM node:4-alpine
+FROM node:4-wheezy
 
 RUN mkdir -p /apps/html2pdf
 
@@ -8,6 +8,8 @@ ADD static /apps/html2pdf/static
 
 WORKDIR /apps/html2pdf
 
-RUN npm install && npm install phantomjs-prebuilt --save
+RUN apt-get install libfontconfig
+RUN npm install \    
+    && npm rebuild
 
 CMD ["node","app.js"]

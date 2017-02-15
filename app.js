@@ -24,6 +24,7 @@ server.route({
 
     pdf.create(payload.html, payload.config || {}).toStream(function (err, stream) {
       if (err) {
+        console.error(err)
         reply('An error occurred while generating pdf!!')
         return
       }
@@ -42,6 +43,7 @@ server.route({
     fs.readFile(html, 'utf8', function (error, data) {
       pdf.create(data, {format: 'A3'}).toStream(function (err, stream) {
         if (err) {
+          console.error(err)
           reply('An error occurred while generating pdf!!')
           return
         }

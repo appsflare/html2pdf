@@ -8,7 +8,8 @@ ADD static /apps/html2pdf/static
 
 WORKDIR /apps/html2pdf
 
-RUN apt-get install libfontconfig
+RUN apt-get install libfontconfig \
+    && apt-get install ttf-mscorefonts-installer
 RUN npm install \    
     && npm rebuild
 

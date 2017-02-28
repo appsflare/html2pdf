@@ -41,7 +41,7 @@ server.route({
     let html = path.join(__dirname, '/static/index.html')
 
     fs.readFile(html, 'utf8', function (error, data) {
-      pdf.create(data, {format: 'A3'}).toStream(function (err, stream) {
+      pdf.create(data, {format: 'A4'}).toStream(function (err, stream) {
         if (err) {
           console.error(err)
           reply('An error occurred while generating pdf!!')

@@ -9,7 +9,7 @@ RUN echo "deb http://us-west-2.ec2.archive.ubuntu.com/ubuntu/ xenial multiverse"
 
 RUN apt-get install -y apt-utils apt-transport-https curl libfontconfig ttf-mscorefonts-installer
 
-RUN curl -sL https://deb.nodesource.com/setup_4.x | bash - \
+RUN curl -sL https://deb.nodesource.com/setup_6.x | bash - \
     && apt-get install -y nodejs build-essential
 
 ENV DEBIAN_FRONTEND noninteractive
